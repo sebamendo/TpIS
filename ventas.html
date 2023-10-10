@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style/ventas.css">
+    <title>Ventas</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-contain">
+            <div class="logo">
+                <p>HarineraMolina</p>
+            </div>
+            <div class="user">
+                <img src="media/klipartz.com (21).png" alt="">
+                <p>Javier</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="navbar">
+            <div class="nav-ventas box">
+                <h2>Ventas</h2>
+                    <ul class="ventas-contain">
+                        <li><a href="#" id="selectClienteLink">Seleccione Cliente</a></li>
+                        <li><a href="#" id="selectProductosLink">Seleccione Productos</a></li>
+                        <li><a href="#" id="formaPagoLink">Forma de Pago</a></li>
+                        <li><a href="#" id="finalizarCompraLink">Finalizar Compra</a></li>
+                        <li><a href="#">Lista de Precio x Menor</a></li>
+                        <li><a href="#">Lista de Precio x Mayor</a></li>
+                    </ul>
+            </div>
+            <div class="nav-despacho box">
+                <h2>Despacho</h2>
+                    <ul class="despacho-contain">
+                        <li><a href="">Ver Stock</a></li>
+                        <li><a href="">Ingresar Stock</a></li>
+                        <li><a href="">Nuevo Producto</a></li>
+                        <li><a href="">Editar producto</a></li>
+                        <li><a href="">Eliminar Producto</a></li>
+                        <li><a href="">Proveedores</a></li>
+                    </ul>
+            </div>
+            <div class="nav-admin box">
+                <h2>Administracion</h2>
+                    <ul class="admin-contain">
+                        <li><a href="">Ingresos</a></li>
+                        <li><a href="">Ceuntas</a></li>
+                        <li><a href="">Administrar CC</a></li>
+                        <li><a href="">*****</a></li>
+                    </ul>
+            </div>
+            <div class="nav-clientes box">
+                <h2>Clientes</h2>
+                    <ul class="clientes-contain">
+                        <li><a href="">Nuevo Cliente</a></li>
+                        <li><a href="">Editar Cliente</a></li>
+                        <li><a href="">Eliminar Cliente</a></li>
+                    </ul>
+            </div>
+        </div>
+        <div class="main">
+            <div class="ventas" id="ventas">
+                <h2>Ventas</h2>
+                <div class="select-client" id="select-client">
+                    <h3>Seleccione Cliente</h3>
+                    <select class="form-select form-select-sm" aria-label="Small select example">
+                        <option selected>Clientes</option>
+                        <option value="1">Noelia</option>
+                        <option value="2">Sebastian</option>
+                        <option value="3">Cesar</option>
+                        <option value="4">Miguel</option>
+                        <option value="5">Micaela</option>
+                    </select>
+                    <button type="button" class="btn btn-primary" id="clienteOK">Siguiente</button>
+                </div>
+                <div class="select-product" id="select-product">
+                    <h3>Seleccione Productos</h3>
+                    <select class="form-select form-select-sm" aria-label="Small select example">
+                        <option selected>Tipo de Productos</option>
+                        <option value="1">Harinas</option>
+                        <option value="2">Cremas</option>
+                        <option value="3">Dulces</option>
+                        <option value="4">Cereales</option>
+                        <option value="5">Etc</option>
+                    </select>
+                    <select class="form-select form-select-sm" aria-label="Small select example">
+                        <option selected>Producto</option>
+                        <option value="1">Harina 000</option>
+                        <option value="2">Harina 0000</option>
+                        <option value="3">Harina Leudante</option>
+                        <option value="4">Harina sin TAC</option>
+                        <option value="5">Harina de Maiz</option>
+                    </select>
+                    <select class="form-select form-select-sm" aria-label="Small select example">
+                        <option selected>Marca</option>
+                        <option value="1">Pureza</option>
+                        <option value="2">Blancaflor</option>
+                        <option value="3">Favorita</option>
+                        <option value="4">Cañuelas</option>
+                        <option value="5">Chacabuco</option>
+                    </select>
+                    <select class="form-select form-select-sm" aria-label="Small select example">
+                        <option selected>Peso</option>
+                        <option value="1">100g</option>
+                        <option value="2">250g</option>
+                        <option value="3">500g</option>
+                        <option value="4">1k</option>
+                        <option value="5">3k</option>
+                        <option value="6">5k</option>
+                        <option value="7">10k</option>
+                        <option value="8">20k</option>
+                    </select>
+                    <div class="input-group flex-nowrap">
+                        <input type="number" class="form-control" placeholder="Cantidad" aria-label="Cantidad"
+                            aria-describedby="addon-wrapping">
+                    </div>
+                    <button type="button" class="btn btn-primary" id="productoOK">Siguiente</button>
+                </div>
+                <div class="forma-pago" id="forma-pago">
+                    <h3>Forma de Pago</h3>
+                    <select class="form-select form-select-sm" aria-label="Small select example">
+                        <option selected>Forma de Pago</option>
+                        <option value="1">Efectivo</option>
+                        <option value="4">CC</option>
+                        <option value="2">Tarjeta Credito</option>
+                        <option value="3">Tarjeta Devito</option>
+                    </select>
+                    <button type="button" class="btn btn-primary" id="pagoOK">Siguiente</button>
+                </div>
+                <div class="compra-ok" id="compra-ok">
+                    <h3>Finaliza Compra</h3>
+                    <div class="datos-cliente">
+                        <p>Cliente : Sebastian</p>
+                        <p>Forma de Pago: CC</p>
+                    </div>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Producto</th>
+                                <th scope="col">Marca</th>
+                                <th scope="col">Peso</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">Precio x U</th>
+                                <th scope="col">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Harina</th>
+                                <td>Cañuela</td>
+                                <td>1k</td>
+                                <td>10</td>
+                                <td>$ 600</td>
+                                <td>$ 6000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Dulce De Leche</th>
+                                <td>Serenisima</td>
+                                <td>500g</td>
+                                <td>20</td>
+                                <td>$ 900</td>
+                                <td>$ 18000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Margarina</th>
+                                <td>Aurora</td>
+                                <td>5k</td>
+                                <td>1</td>
+                                <td>$ 15000</td>
+                                <td>$ 15000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button type="button" class="btn btn-primary" id="finalizar">Finalizar</button>
+                </div>
+                <div class="lista-precio-menor" id="lista-precio-menor">
+                    <h3>Lista de Precio por Menor</h3>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Producto</th>
+                                <th scope="col">Marca</th>
+                                <th scope="col">Peso</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">Precio Proveeror</th>
+                                <th scope="col">Precio Unitario</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Harina</th>
+                                <td>Cañuela</td>
+                                <td>1k</td>
+                                <td>200</td>
+                                <td>$ 600</td>
+                                <td>$ 800</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Dulce De Leche</th>
+                                <td>Serenisima</td>
+                                <td>500g</td>
+                                <td>150</td>
+                                <td>$ 700</td>
+                                <td>$ 900</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Margarina</th>
+                                <td>Aurora</td>
+                                <td>5k</td>
+                                <td>200</td>
+                                <td>$ 13000</td>
+                                <td>$ 15000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Margarina</th>
+                                <td>Aurora</td>
+                                <td>5k</td>
+                                <td>200</td>
+                                <td>$ 13000</td>
+                                <td>$ 15000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="lista-precio-mayor" id="lista-precio-mayor">
+                    <h3>Lista de Precio por Mayor</h3>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Producto</th>
+                                <th scope="col">Marca</th>
+                                <th scope="col">Peso</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">Precio Proveeror</th>
+                                <th scope="col">Precio Unitario</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Harina</th>
+                                <td>Cañuela</td>
+                                <td>1k</td>
+                                <td>200</td>
+                                <td>$ 600</td>
+                                <td>$ 700</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Dulce De Leche</th>
+                                <td>Serenisima</td>
+                                <td>500g</td>
+                                <td>150</td>
+                                <td>$ 700</td>
+                                <td>$ 800</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Margarina</th>
+                                <td>Aurora</td>
+                                <td>5k</td>
+                                <td>200</td>
+                                <td>$ 13000</td>
+                                <td>$ 14000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Margarina</th>
+                                <td>Aurora</td>
+                                <td>5k</td>
+                                <td>200</td>
+                                <td>$ 13000</td>
+                                <td>$ 14000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="despacho">
+                <h2>Despacho</h2>
+                <div class="ver-stock">
+                    <h3>Ver Stock</h3>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    </form>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Producto</th>
+                                <th scope="col">Marca</th>
+                                <th scope="col">Peso</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">Precio Proveeror</th>
+                                <th scope="col">Precio Unitario</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Harina</th>
+                                <td>Cañuela</td>
+                                <td>1k</td>
+                                <td>200</td>
+                                <td>$ 600</td>
+                                <td>$ 800</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Dulce De Leche</th>
+                                <td>Serenisima</td>
+                                <td>500g</td>
+                                <td>150</td>
+                                <td>$ 700</td>
+                                <td>$ 900</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Margarina</th>
+                                <td>Aurora</td>
+                                <td>5k</td>
+                                <td>200</td>
+                                <td>$ 13000</td>
+                                <td>$ 15000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Margarina</th>
+                                <td>Aurora</td>
+                                <td>5k</td>
+                                <td>200</td>
+                                <td>$ 13000</td>
+                                <td>$ 15000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Margarina</th>
+                                <td>Aurora</td>
+                                <td>5k</td>
+                                <td>200</td>
+                                <td>$ 13000</td>
+                                <td>$ 15000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Margarina</th>
+                                <td>Aurora</td>
+                                <td>5k</td>
+                                <td>200</td>
+                                <td>$ 13000</td>
+                                <td>$ 15000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Margarina</th>
+                                <td>Aurora</td>
+                                <td>5k</td>
+                                <td>200</td>
+                                <td>$ 13000</td>
+                                <td>$ 15000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Margarina</th>
+                                <td>Aurora</td>
+                                <td>5k</td>
+                                <td>200</td>
+                                <td>$ 13000</td>
+                                <td>$ 15000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="ingresar-stock">
+                    <h3>Ingresar productos al stock</h3>
+                    <select class="form-select form-select-sm" aria-label="Small select example">
+                        <option selected>Tipo de Productos</option>
+                        <option value="1">Harinas</option>
+                        <option value="2">Cremas</option>
+                        <option value="3">Dulces</option>
+                        <option value="4">Cereales</option>
+                        <option value="5">Etc</option>
+                    </select>
+                    <select class="form-select form-select-sm" aria-label="Small select example">
+                        <option selected>Producto</option>
+                        <option value="1">Harina 000</option>
+                        <option value="2">Harina 0000</option>
+                        <option value="3">Harina sin TAC</option>
+                        <option value="4">Harina Leudante</option>
+                        <option value="5">Harina de Maiz</option>
+                    </select>
+                    <select class="form-select form-select-sm" aria-label="Small select example">
+                        <option selected>Marca</option>
+                        <option value="1">Pureza</option>
+                        <option value="2">Blancaflor</option>
+                        <option value="3">Favorita</option>
+                        <option value="4">Cañuelas</option>
+                        <option value="5">Chacabuco</option>
+                    </select>
+                    <select class="form-select form-select-sm" aria-label="Small select example">
+                        <option selected>Peso</option>
+                        <option value="1">100g</option>
+                        <option value="2">250g</option>
+                        <option value="3">500g</option>
+                        <option value="4">1k</option>
+                        <option value="5">3k</option>
+                        <option value="5">5k</option>
+                        <option value="5">10k</option>
+                        <option value="5">20k</option>
+                    </select>
+                    <div class="input-group flex-nowrap">
+                        <input type="number" class="form-control" placeholder="Cantidad" aria-label="Cantidad"
+                            aria-describedby="addon-wrapping">
+                    </div>
+                    <button type="button" class="btn btn-primary">Agregar</button>
+                </div>
+                <div class="nuevo-producto">
+                    <h3>Agregar Nuevo Producto</h3>
+                    <input type="text" class="form-control" placeholder="Nombre del Producto"
+                        aria-label="nombre-producto" aria-describedby="basic-addon1">
+                    <select class="form-select form-select-sm" aria-label="Small select example">
+                        <option selected>Tipo de Productos</option>
+                        <option value="1">Harinas</option>
+                        <option value="2">Cremas</option>
+                        <option value="3">Dulces</option>
+                        <option value="4">Cereales</option>
+                        <option value="5">Etc</option>
+                    </select>
+                    <select class="form-select form-select-sm" aria-label="Small select example">
+                        <option selected>Producto</option>
+                        <option value="1">Harina 000</option>
+                        <option value="2">Harina 0000</option>
+                        <option value="3">Harina sin TAC</option>
+                        <option value="4">Harina Leudante</option>
+                        <option value="5">Harina de Maiz</option>
+                    </select>
+                    <select class="form-select form-select-sm" aria-label="Small select example">
+                        <option selected>Marca</option>
+                        <option value="1">Pureza</option>
+                        <option value="2">Blancaflor</option>
+                        <option value="3">Favorita</option>
+                        <option value="4">Cañuelas</option>
+                        <option value="5">Chacabuco</option>
+                    </select>
+                    <select class="form-select form-select-sm" aria-label="Small select example">
+                        <option selected>Peso</option>
+                        <option value="1">100g</option>
+                        <option value="2">250g</option>
+                        <option value="3">500g</option>
+                        <option value="4">1k</option>
+                        <option value="5">3k</option>
+                        <option value="5">5k</option>
+                        <option value="5">10k</option>
+                        <option value="5">20k</option>
+                    </select>
+                    <div class="input-group flex-nowrap">
+                        <input type="number" class="form-control" placeholder="Cantidad" aria-label="Cantidad"
+                            aria-describedby="addon-wrapping" inputmode="numeric">
+                    </div>
+                    <button type="button" class="btn btn-primary">Agregar</button>
+                </div>
+                <div class="proveedores">
+                    <h3>Lista De proveedores</h3>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Direccion</th>
+                                <th scope="col">Telefono</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Lista Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Molino Cañuelas</th>
+                                <td>tal altura</td>
+                                <td>011 16463156</td>
+                                <td>molinoscañuelas@tal.com</td>
+                                <td><button type="button" class="btn btn-primary boton-lista-proveedores"><a
+                                            href="">Lista</a></button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">TaSerenisima</th>
+                                <td>tal altura</td>
+                                <td>011-13256479</td>
+                                <td>taserenisima@tal.com</td>
+                                <td><button type="button" class="btn btn-primary boton-lista-proveedores"><a
+                                            href="">Lista</a></button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Molinos S.A</th>
+                                <td>tal altura</td>
+                                <td>011-13258978</td>
+                                <td>molinossa@tal.com</td>
+                                <td><button type="button" class="btn btn-primary boton-lista-proveedores"><a
+                                            href="">Lista</a></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="admin">
+                <h2>Administracion</h2>
+                <diniv class="ingresos">
+                    <h3>ingresos</h3>
+                    <div class="ingresos-group">
+                        <div class="ingreso-contain">
+                            <img src="media/sodapdf-converted.png" alt="" width="150px">
+                            <h4>Mercado Pago</h4>
+                            <p>$0000.000</p>
+                        </div>
+                        <div class="ingreso-contain">
+                            <img src="media/cheque.png" alt="" width="150px">
+                            <h4>Cheuqes</h4>
+                            <p>$0000.000</p>
+                        </div>
+                        <div class="ingreso-contain">
+                            <img src="media/cajaregis.png" alt="" width="150px">
+                            <h4>Caja</h4>
+                            <p>$0000.000</p>
+                        </div>
+                        <div class="ingreso-contain">
+                            <img src="media/banco.png" alt="" width="150px">
+                            <h4>Banco</h4>
+                            <p>$0000.000</p>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary"><a href="">Cerrar Caja</a></button>
+                </diniv>
+                <div class="cuentas">
+                    <h3>Cuentas</h3>
+                    <div class="cuentas-group">
+                        <div class="cuentas-contain">
+                            <img src="media/sodapdf-converted.png" alt="" width="150px">
+                            <h4>Mercado Pago</h4>
+                            <p>$0000.000</p>
+                        </div>
+                        <div class="cuentas-contain">
+                            <img src="media/cheque.png" alt="" width="150px">
+                            <h4>Cheuqes</h4>
+                            <p>$0000.000</p>
+                        </div>
+                        <div class="cuentas-contain">
+                            <img src="media/cajaregis.png   " alt="" width="150px">
+                            <h4>Caja</h4>
+                            <p>$0000.000</p>
+                        </div>
+                        <div class="cuentas-contain">
+                            <img src="media/banco.png" alt="" width="150px">
+                            <h4>Banco</h4>
+                            <p>$0000.000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cc">
+                    <h3>Administrar CC</h3>
+                    <div class="cliente-cc">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Cliente" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Buscar</button>
+                        </form>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">N° Factura</th>
+                                    <th scope="col">Fecha</th>
+                                    <th scope="col">Valor</th>
+                                    <th scope="col">modificar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">0354</th>
+                                    <td>26/01/23</td>
+                                    <td>$ 150000</td>
+                                    <td><button type="button" class="btn btn-primary"><a href="">Modificar</a></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3597</th>
+                                    <td>12/04/23</td>
+                                    <td>$ 80000</td>
+                                    <td><button type="button" class="btn btn-primary"><a href="">Modificar</a></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">9853</th>
+                                    <td>09/10/23</td>
+                                    <td>$ 250000</td>
+                                    <td><button type="button" class="btn btn-primary"><a href="">Modificar</a></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="clientes">
+                <h2>Clientes</h2>
+                <div class="new-client">
+                    <h3>Agregar Nuevo Cliente</h3>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Ingrese el Nombre</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nombre">
+                        <label for="exampleFormControlInput1" class="form-label">Ingrese el Apellido</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Apellido">
+                        <label for="exampleFormControlInput1" class="form-label">Ingrese la Direccion</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Direccion">
+                        <label for="exampleFormControlInput1" class="form-label">Imgrese el Telefono</label>
+                        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Telefono">
+                        <label for="exampleFormControlInput1" class="form-label">Ingrese Email </label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="email">
+                    </div>
+                    <button type="button" class="btn btn-primary"><a href="">Guardar</a></button>
+                </div>
+                <div class="edit-client">
+                    <h3>Editar Clientes</h3>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Apellido</th>
+                                <th scope="col">Direccion</th>
+                                <th scope="col">telefono</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Editar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Sebastian</th>
+                                <td>mendoza</td>
+                                <td>tal altura</td>
+                                <td>011-35432264</td>
+                                <td>sebastian@tal.com</td>
+                                <td><button type="button" class="btn btn-primary"><a href="">Editar</a></button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Micaela</th>
+                                <td>Galeano</td>
+                                <td>tal altura</td>
+                                <td>011-13548976</td>
+                                <td>micaela@tal.com</td>
+                                <td><button type="button" class="btn btn-primary"><a href="">Editar</a></button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Noelina</th>
+                                <td>Pintos</td>
+                                <td>tal altura</td>
+                                <td>011-32156497</td>
+                                <td>noelia@tal.com</td>
+                                <td><button type="button" class="btn btn-primary"><a href="">Editar</a></button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Cesar</th>
+                                <td>Kownacki</td>
+                                <td>tal altura</td>
+                                <td>011-64975231</td>
+                                <td>cesar@tal.com</td>
+                                <td><button type="button" class="btn btn-primary"><a href="">Editar</a></button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Miguel</th>
+                                <td>Brizuela</td>
+                                <td>tal altura</td>
+                                <td>011-36964312</td>
+                                <td>miguel@tal.com</td>
+                                <td><button type="button" class="btn btn-primary"><a href="">Editar</a></button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Daniel</th>
+                                <td>Carabajal</td>
+                                <td>tal cual</td>
+                                <td>011-34129647</td>
+                                <td>daniel@tal.com</td>
+                                <td><button type="button" class="btn btn-primary"><a href="">Editar</a></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="delete-client">
+                    <h3>Eliminar Cliente</h3>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Apellido</th>
+                                <th scope="col">Direccion</th>
+                                <th scope="col">telefono</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Editar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Sebastian</th>
+                                <td>mendoza</td>
+                                <td>tal altura</td>
+                                <td>011-35432264</td>
+                                <td>sebastian@tal.com</td>
+                                <td><button type="button" class="btn btn-primary"><a href="">Eliminar</a></button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Micaela</th>
+                                <td>Galeano</td>
+                                <td>tal altura</td>
+                                <td>011-13548976</td>
+                                <td>micaela@tal.com</td>
+                                <td><button type="button" class="btn btn-primary"><a href="">Eliminar</a></button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Noelina</th>
+                                <td>Pintos</td>
+                                <td>tal altura</td>
+                                <td>011-32156497</td>
+                                <td>noelia@tal.com</td>
+                                <td><button type="button" class="btn btn-primary"><a href="">Eliminar</a></button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Cesar</th>
+                                <td>Kownacki</td>
+                                <td>tal altura</td>
+                                <td>011-64975231</td>
+                                <td>cesar@tal.com</td>
+                                <td><button type="button" class="btn btn-primary"><a href="">Eliminar</a></button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Miguel</th>
+                                <td>Brizuela</td>
+                                <td>tal altura</td>
+                                <td>011-36964312</td>
+                                <td>miguel@tal.com</td>
+                                <td><button type="button" class="btn btn-primary"><a href="">Eliminar</a></button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Daniel</th>
+                                <td>Carabajal</td>
+                                <td>tal cual</td>
+                                <td>011-34129647</td>
+                                <td>daniel@tal.com</td>
+                                <td><button type="button" class="btn btn-primary"><a href="">Eliminar</a></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
