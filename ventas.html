@@ -33,10 +33,10 @@
             <div class="nav-ventas box">
                 <h2>Ventas</h2>
                     <ul class="ventas-contain">
-                        <li><a href="#" id="selectClienteLink">Seleccione Cliente</a></li>
-                        <li><a href="#" id="selectProductosLink">Seleccione Productos</a></li>
-                        <li><a href="#" id="formaPagoLink">Forma de Pago</a></li>
-                        <li><a href="#" id="finalizarCompraLink">Finalizar Compra</a></li>
+                        <li><a href="#">Seleccione Cliente</a></li>
+                        <li><a href="#">Seleccione Productos</a></li>
+                        <li><a href="#">Forma de Pago</a></li>
+                        <li><a href="#">Finalizar Compra</a></li>
                         <li><a href="#">Lista de Precio x Menor</a></li>
                         <li><a href="#">Lista de Precio x Mayor</a></li>
                     </ul>
@@ -56,7 +56,7 @@
                 <h2>Administracion</h2>
                     <ul class="admin-contain">
                         <li><a href="">Ingresos</a></li>
-                        <li><a href="">Ceuntas</a></li>
+                        <li><a href="">Cuentas</a></li>
                         <li><a href="">Administrar CC</a></li>
                         <li><a href="">*****</a></li>
                     </ul>
@@ -251,7 +251,7 @@
                                 <th scope="col">Marca</th>
                                 <th scope="col">Peso</th>
                                 <th scope="col">Cantidad</th>
-                                <th scope="col">Precio Proveeror</th>
+                                <th scope="col">Precio Proveedor</th>
                                 <th scope="col">Precio Unitario</th>
                             </tr>
                         </thead>
@@ -294,7 +294,7 @@
             </div>
             <div class="despacho">
                 <h2>Despacho</h2>
-                <div class="ver-stock">
+                <div class="ver-stock" id="ver-stock">
                     <h3>Ver Stock</h3>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
@@ -379,7 +379,7 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="ingresar-stock">
+                <div class="ingresar-stock" id="ingresar-stock">
                     <h3>Ingresar productos al stock</h3>
                     <select class="form-select form-select-sm" aria-label="Small select example">
                         <option selected>Tipo de Productos</option>
@@ -422,7 +422,7 @@
                     </div>
                     <button type="button" class="btn btn-primary">Agregar</button>
                 </div>
-                <div class="nuevo-producto">
+                <div class="nuevo-producto" id="nuevo-producto">
                     <h3>Agregar Nuevo Producto</h3>
                     <input type="text" class="form-control" placeholder="Nombre del Producto"
                         aria-label="nombre-producto" aria-describedby="basic-addon1">
@@ -467,7 +467,7 @@
                     </div>
                     <button type="button" class="btn btn-primary">Agregar</button>
                 </div>
-                <div class="proveedores">
+                <div class="proveedores" id="proveedores">
                     <h3>Lista De proveedores</h3>
                     <table class="table table-striped">
                         <thead>
@@ -510,7 +510,7 @@
             </div>
             <div class="admin">
                 <h2>Administracion</h2>
-                <diniv class="ingresos">
+                <div class="ingresos" id="ingresos">
                     <h3>ingresos</h3>
                     <div class="ingresos-group">
                         <div class="ingreso-contain">
@@ -520,7 +520,7 @@
                         </div>
                         <div class="ingreso-contain">
                             <img src="media/cheque.png" alt="" width="150px">
-                            <h4>Cheuqes</h4>
+                            <h4>Cheques</h4>
                             <p>$0000.000</p>
                         </div>
                         <div class="ingreso-contain">
@@ -535,8 +535,8 @@
                         </div>
                     </div>
                     <button type="button" class="btn btn-primary"><a href="">Cerrar Caja</a></button>
-                </diniv>
-                <div class="cuentas">
+                </div>
+                <div class="cuentas" id="cuentas">
                     <h3>Cuentas</h3>
                     <div class="cuentas-group">
                         <div class="cuentas-contain">
@@ -546,7 +546,7 @@
                         </div>
                         <div class="cuentas-contain">
                             <img src="media/cheque.png" alt="" width="150px">
-                            <h4>Cheuqes</h4>
+                            <h4>Cheques</h4>
                             <p>$0000.000</p>
                         </div>
                         <div class="cuentas-contain">
@@ -561,7 +561,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="cc">
+                <div class="cc" id="cc">
                     <h3>Administrar CC</h3>
                     <div class="cliente-cc">
                         <form class="d-flex" role="search">
@@ -764,7 +764,6 @@
         </div>
     </main>
 
-    <script src="script/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>

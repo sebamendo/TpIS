@@ -574,7 +574,7 @@ main {
 
 .ingresos{
     width: 100%;
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 
@@ -701,6 +701,38 @@ main {
     text-align: center;
 }
 
-.clientes {
+.ventas,
+.select-client,
+.select-product,
+.forma-pago,
+.compra-ok,
+.lista-precio-menor,
+.lista-precio-mayor{
     display: none;
+}
+
+.despacho,
+.ver-stock,
+.ingresar-stock,
+.nuevo-producto,
+.proveedores{
+    display: none;
+}
+
+.admin,
+.ingresos,
+.cuentas,
+.cc{
+    display: none;
+}
+
+.clientes{
+    display: none;
+}
+
+.admin{
+    display: block;
+}
+.cc{
+    display: block;
 }
